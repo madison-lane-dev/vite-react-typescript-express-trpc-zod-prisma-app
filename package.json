@@ -1,0 +1,33 @@
+{
+  "name": "vite-react-typescript-express-trpc-app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:client": "npm run build -w react-crud-app",
+    "build:server": "npm run build -w api-server",
+    "build": "run-s build:server build:client",
+    "dev:client": "npm run dev -w react-crud-app",
+    "dev:server": "npm run dev -w api-server",
+    "dev": "run-p dev:*",
+    "data:create": "npm run data:create -w api-server",
+    "data:push": "npm run data:push -w api-server"
+  },
+  "workspaces": [
+    "sides/*"
+  ],
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "wait-port": "^1.0.1",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+  }
+}
